@@ -1,1 +1,1 @@
-# LaTeX-Presentation-Template
+# LaTeX Presentation Template
