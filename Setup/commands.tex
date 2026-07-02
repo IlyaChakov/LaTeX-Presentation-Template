@@ -1,0 +1,50 @@
+% Настройка комманд
+\renewcommand{\footnotesize}{\scriptsize}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+% \footnote keeps standard numbering, while \footnotetext is printed without a marker.
+\makeatletter
+\let\numbered@footnotetext\footnotetext
+\renewcommand{\footnotetext}{%
+  \@ifnextchar[{\plain@footnotetext@opt}{\plain@footnotetext}%
+}
+\newcommand{\plain@footnotetext}[1]{%
+  \begingroup
+  \renewcommand{\thefootnote}{}%
+  \numbered@footnotetext{#1}%
+  \endgroup
+}
+\newcommand{\plain@footnotetext@opt}[2][]{%
+  \begingroup
+  \renewcommand{\thefootnote}{}%
+  \numbered@footnotetext[#1]{#2}%
+  \endgroup
+}
+\newcommand{\tablefootnotetext}[1]{%
+  \ifx\@footnotetext\TX@trial@ftn
+    \textsuperscript{\number\numexpr\value{footnote}+1\relax}%
+  \else
+    \begingroup
+    \renewcommand{\thefootnote}{\arabic{footnote}}%
+    \refstepcounter{footnote}%
+    \protected@xdef\@thefnmark{\thefootnote}%
+    \@footnotemark
+    \edef\table@footnote@mark{\thefootnote}%
+    \global\setbox\beamer@footins\vbox{%
+      \hsize\framewidth
+      \textwidth\hsize
+      \columnwidth\hsize
+      \unvbox\beamer@footins
+      \reset@font\footnotesize
+      \@parboxrestore
+      \color@begingroup
+        \noindent\hbox to 1.8em{\hfil
+          {\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}%
+          \textsuperscript{\table@footnote@mark}}}%
+        \rule\z@\footnotesep\ignorespaces#1\@finalstrut\strutbox\par
+      \color@endgroup
+    }%
+    \endgroup
+  \fi
+}
+\makeatother

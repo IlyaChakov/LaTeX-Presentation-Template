@@ -1,0 +1,108 @@
+% Ключевой фактор цикла
+\section{Key factor of the cycle}
+
+\begin{frame}
+  \frametitle{Characteristics of fixed capital}
+  \begin{block}{Definition}
+    \textbf{Fixed capital} –  special part of constant\tablefootnotetext{In marxist terminology, \textit{constant capital} – equipment and raw materials (transfers value), \textit{variable capital} – labor (creates surplus value). At the same time, equipment makes up the \textit{fixed capital}, and raw materials and labor make up the \textit{working capital}.} capital in the form of machinery and equipment that is not fully consumed within a single production cycle, functions through repeated participation in production, retains its material content and is subject to physical and moral deterioration during the gradual transfer of its own value to the value of finished products.
+  \end{block}
+
+  \textbf{Features of the fixed capital:}
+  \begin{itemize}
+    \item \textit{Periodicity and mass reproduction:} the need for periodic mass advance payments in full due to physical and moral deterioration;
+    \item \textit{Inertia of reproduction:} significant amount of advance payments, long period of turnover, high maintenance and operation costs, difficulty of capital mobility between industries;
+    \item \textit{Cyclical role:} aggravation of immanent contradictions of the capitalist mode of production during the process of renewal, the development of the material and production base forms the prerequisites for a crisis of general overproduction.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Cyclical role of fixed capital}
+  \textbf{Mechanism of cycle formation:}
+  \begin{enumerate}
+    \item Necessity of renewal of fixed capital under the pressure of physical wear and favorable market conditions at the beginning of the growth phase;
+    \item Increasing output of means of production, expansion and technological modernization of the production base;
+    \item Growth of the output of consumer goods, the aggravation of the contradiction between production and consumption, the prerequisites for the crisis of overproduction;
+    \item Partial and temporary forced resolution of contradictions during the crisis of overproduction, capital depreciation.
+  \end{enumerate}
+
+  \begin{block}{Proposition}
+    Technological modernization causes an increase in the organic composition of capital and a decrease in the rate of profit, while a decrease in the rate of profit necessitates technological modernization at the beginning of the next phase of growth.
+  \end{block}
+
+  \begin{alertblock}{Finding}
+    The renewal of fixed capital is both a cause and a consequence of the crisis of general overproduction, causing a cyclical form of movement of the capitalist economy.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reproduction of fixed capital within the enterprise}
+  The process of capitalist reproduction within a single enterprise can be decomposed into a continuous annual turnover of working capital $wc_{t} = c^{wc}_{t} + v^{wc}_{t}$ and a discrete turnover of fixed capital $o=C^{o}_{*} = \sum_{n=t}^{t+(l-1)}\overline{c}^{o}_{n}$ for $l \in \mathbb{N}$ years:
+
+  \begin{block}{Equation}
+    \begin{equation}
+      \begin{cases} D^{wc}_t \rightarrow T^{wc}_t \rightarrow P_t^{wc}(c^{wc}_t + v^{wc}_t) \xRightarrow[\text{value increment}]{w_t^{wc} = c^{wc}_t + v^{wc}_t + m_t} T_t^{'wc} \rightarrow D_t^{'wc}, \quad D^{'wc}_t > D^{wc}_t \\ D^o_{t^{ce}_i} \rightarrow T^o_{t^{ce}_i} \rightarrow P^o_{t \in \{t^{ce}_{i}, \dots, t^{da}_{i}\}} \xRightarrow[\text{value transfer}]{w^o_{t} = \overline{c}^{0}_{t}} T^o_{t^{da}_i} \rightarrow D^o_{t^{da}_i}, \quad D^{o}_{t^{ce}_{i}} = D^{o}_{t^{da}_{i}} \end{cases}
+    \end{equation}
+  \end{block}
+
+  \begin{alertblock}{Example}
+    In the year $t=1$ the enterprise advanced fixed capital worth $C^{o}_{1} = 1000$ units. Subject to uniform annual depreciation of $\overline{c}^{o} = 100$ units after $l = 10$ years the fixed capital will require full reimbursement in the amount of $C^{o}_{11} = C^{o}_{1} = 1000$ units.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reproduction of fixed capital within the economy (1)}
+  Let there be a universal set of enterprises in the economy $\mathrm{F}_{\mathbb{U}}$. Let us define $\mathrm{F}_{\mathbb{U}} \supseteq \mathrm F_N = \{f_j\}_{j \in \mathrm{J}^{N}}$ as a set of $N \in \mathbb N$ enterprises, which is a representative sample containing the corresponding selection criteria $\mathcal{P}$ for the analysis of cyclical processes in the capitalist economy enterprise $f_j \in \mathrm{F}_{N}$:
+
+  \begin{block}{Equation}
+    \begin{equation}
+      \begin{aligned} \mathrm{F}_{\mathbb{U}} \supseteq \mathrm F_N := \{f \in \mathrm{F}_{\mathbb{U}} \mid \mathcal{P}(f)\} \\ |\mathrm{F}_{N}| = N, \; N \in \mathbb N \end{aligned} \implies \begin{aligned} \mathrm{F}_{N} = \{f_j \mid j \in \mathrm{J}^{N} \} \\ \mathrm{J}^{N} = \{ 1,2,\dots,N\} \end{aligned}
+    \end{equation}
+  \end{block}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reproduction of fixed capital within the economy (2)}
+  In this case, the cumulative stochastic fixed capital renewal flow $K^{\mathrm{s}}(t)$ can be represented as:
+
+  \begin{block}{Equation}
+    \begin{equation}
+      K^{\mathrm{s}}(t) = K^{\mathrm{d}}(t) + \underbrace{\sum_{n=0}^{\infty} \rho^{n} x_{t-nL}}_{\mathcal{X}_{t}^{\rho}} - \underbrace{\mathbf 1_{\mathrm{T}^{\mathrm{d,ce}}}(t) \cdot (1- \rho) \sum_{n=1}^{\infty} x_{t-nL}}_{R_{t}}
+    \end{equation}
+
+    \begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash\hyphenpenalty=10000\exhyphenpenalty=10000}X}
+    $K^{\mathrm{s}}(t)$ & Cumulative stochastic flow \\
+    $K^{\mathrm{d}}(t)$ & Base determined flow \\
+    $\mathcal{X}_{t}^{\rho}$ & Random deviations in growth phase \\
+    $R_{t}$ & Neutralization flow under competitive pressure \\
+    $\rho$ & Deviation neutralization parameter, $\rho \in [0; 1]$
+  \end{tabularx}
+  \end{block}
+
+  \begin{alertblock}{Example}
+    Enterprises $f_j \in \mathrm{F}_{N}$ in periods $t=1,2,3$ respectively advanced fixed capital in physical volumes $K^{\mathrm{s}}(1) = 10, \; K^{\mathrm{s}}(2) = 8, \; K^{\mathrm{s}}(3) = 5$. In this case, with a period of physical depreciation $l^{j} = 10, \; \forall j \in \mathrm{J}^{N}$ excluding deviations $\mathcal{X}_{t}^{\rho}$ and neutralization $R_{t}$ within simple reproduction after 10 years fixed capital will be advanced again in the amounts of $K^{\mathrm{s}}(11) = 10, \; K^{\mathrm{s}}(12) = 8, \; K^{\mathrm{s}}(13) = 5$ respectively.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Reproduction of fixed capital within the economy (3)}
+  \begin{alertblock}{Finding}
+    The reproduction of fixed capital within capitalist economy acquires a \textbf{periodic and massive character}, and the moments of its full advance and subsequent compensation are synchronized \textbf{at the beginning of the growth phase} under the influence of \textbf{market conditions, fluctuations in rate of profit and competition}, whereas deviations arising from the industry rhythm are offset over time under the pressure of the above mentioned factors and do not entail a violation of the periodicity of this the process.
+  \end{alertblock}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Factors modifying cycle}
+  Factors modifying cycle can be divided into the following main categories:
+
+  \vspace{10pt}
+
+  \begin{tabularx}{\textwidth}{l>{\raggedright\arraybackslash\hyphenpenalty=10000\exhyphenpenalty=10000}X}
+    \textbf{Cycle catalysts} & trade and speculation, commercial credit and bank loans \\
+    \textbf{Structural changes} & monopolization of the economy, financial and fictitious capital, government regulation \\
+    \textbf{Spatial boundaries} & capital exports, global value chains, unequal trade exchange
+  \end{tabularx}
+
+  \begin{alertblock}{Important}
+    Even under the conditions of modern capitalism the core of the cyclical dynamics of the capitalist economy is still precisely the sphere of industrial production.
+  \end{alertblock}
+\end{frame}
